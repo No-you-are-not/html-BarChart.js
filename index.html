@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+</head>
+<body>
+<div id="chart">
+</div>
+<hr id ="line">
+<script src="main.js"></script>
+</body>
+<script>
+    function downloadChart() {
+
+        var node = document.getElementById('chart');
+
+        domtoimage.toPng(node)
+            .then(function (dataUrl) {
+                var img = new Image();
+                img.src = dataUrl;
+                downloadURI(dataUrl, "chart.png")
+            })
+            .catch(function (error) {
+                console.error('oops, something went wrong', error);
+            });
+
+    }
+    function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        delete link;
+    }
+
+    //window.onload = downloadChart;
+</script>
+</html>
