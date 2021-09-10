@@ -14,7 +14,7 @@ After that we need to include JavaScript file in our page. To make that we have 
 
 Now we want to draw a new chart using our data. BarChart.js creates charts based on json data, like this :
 
-```
+```javascript
 {
    "Luke": 34,
    "Mary": 14,
@@ -26,7 +26,7 @@ Now we want to draw a new chart using our data. BarChart.js creates charts based
 ```
 To start using our data we need to wrap it around with ``` <script> ``` tag and and add some "settings", so at the end we will have something like this at the bottom of our html file:
 
-```
+```javascript
 <script type="text/javascript" src="main.bundle.js"></script>
 <script type="text/javascript">
     settings = $.createSettings({
