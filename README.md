@@ -16,11 +16,27 @@ Now we want to draw a new chart using our data. BarChart.js creates charts based
 
 ```
 {
- "Luke": 34,
- "Mary": 14,
- "Kally": 28,
- "Duran": 19,
- "Emily": 13,
- "Bob": 41,
-}
+   "Luke": 34,
+   "Mary": 14,
+   "Kally": 28,
+   "Duran": 19,
+   "Emily": 13,
+   "Bob": 41,
+ }
+```
+To start using our data we need to wrap it around with ``` <script> ``` tag and and add some "settings", so at the end we will have something like this at the bottom of our html file:
+
+```
+<script type="text/javascript" src="main.bundle.js"></script>
+<script type="text/javascript">
+    settings = $.createSettings({
+        "Luke": 34,
+        "Mary": 14,
+        "Kally": 28,
+        "Duran": 19,
+        "Emily": 13,
+        "Bob": 41,
+    });
+    $.createBarChart(settings)
+</script>
 ```
