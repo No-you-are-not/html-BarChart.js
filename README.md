@@ -1,5 +1,6 @@
 # BarChart.js
 ## Documentation
-⋅⋅*Introduction
-⋅⋅*Getting started
+*Introduction
++Getting started
+-xnxnxj
 
