@@ -40,3 +40,6 @@ To start using our data we need to wrap it around with ``` <script> ``` tag and 
     $.createBarChart(settings)
 </script>
 ```
+And after all these steps you will see a bar chart! Easy as it is!
+
+![image](https://user-images.githubusercontent.com/74618788/132841471-f3bb7db9-750c-4e47-8849-fb8be4f88925.png)
